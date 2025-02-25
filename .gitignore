@@ -1,1 +1,10 @@
 *.zip
+
+bin/
+tmp/
+build-errors.log
+
+.terraform
+
+# pg ssl
+pgssl
