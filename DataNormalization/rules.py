@@ -10,7 +10,8 @@ Rules = {
      "Mitre": ["Initial Breach", "Command and Control", "Web Protocols"],
      "KillChainTag": "Delivery",
      "MitreTag": "T1071",
-     "Context": "APT29 is known for using the Pupy C2 server. The actors send a reverse shell via a document named 3aka.doc which utilizes either shell or powershell."
+     "Context": "APT29 is known for using the Pupy C2 server. The actors send a reverse shell via a document named 3aka.doc which utilizes either shell or powershell.", 
+     "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
     {"RuleName": "APT29_Draft_Zip_Powershell",
      "Detection": {
@@ -22,7 +23,8 @@ Rules = {
      "Mitre": ["Rapid Collect and Exfiltration", "Exfiltration"],
      "KillChainTag": "Installation",
      "MitreTag": "T1646",
-     "Context": "APT29 is known for using the Pupy C2 server with Draft.zip. They are known to use a command to download and run Draft.zip in AppData directory"
+     "Context": "APT29 is known for using the Pupy C2 server with Draft.zip. They are known to use a command to download and run Draft.zip in AppData directory",
+     "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
     #TODO: change content except rulename 
     {"RuleName": "Metasploit_Handler",
@@ -35,7 +37,8 @@ Rules = {
      "Mitre": ["Deploy Stealth Toolkit"],
      "KillChainTag": "Installation",
      "MitreTag": ["T1027", "T1105"],
-     "Context": "APT29 is known for using the Pupy C2 server to deploy a Metasploit handler as part of deploying a stealth toolkit."
+     "Context": "APT29 is known for using the Pupy C2 server to deploy a Metasploit handler as part of deploying a stealth toolkit.",
+     "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
     {"RuleName": "Meterpreter_Setup",
      "Detection": {
@@ -49,7 +52,8 @@ Rules = {
      "Mitre": ["Deploy Stealth Toolkit"],
      "KillChainTag": "Installation",
      "MitreTag": ["T1027", "T1105"],
-     "Context": "APT29 is known for using the Pupy C2 server to deploy Meterpreter as part of deploying a stealth toolkit."
+     "Context": "APT29 is known for using the Pupy C2 server to deploy Meterpreter as part of deploying a stealth toolkit.",
+     "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
     #Step 4 - Defense Evasion and Discovery 
     {"RuleName": "Terminate-Pupy-RAT-Proc",
@@ -62,7 +66,8 @@ Rules = {
      "Mitre": ["Defense Evasion and Discovery"],
      "KillChainTag": "Defense Evasion",
      "MitreTag": ["T1027", "T1105"],
-     "Context": "APT29 is known for using the Pupy C2 server and deleting their artifacts using meterpreter via Powershell."
+     "Context": "APT29 is known for using the Pupy C2 server and deleting their artifacts using meterpreter via Powershell.",
+     "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
     #Step 5 - Persistence
     {"RuleName": "Meterpreter-Persistence",
@@ -75,7 +80,8 @@ Rules = {
      "Mitre": ["Persistence"],
      "KillChainTag": "Persistence",
      "MitreTag": ["T1027", "T1105"],
-     "Context": "APT29 is known for persising using the Invoke-Persistence commands."
+     "Context": "APT29 is known for persising using the Invoke-Persistence commands.",
+     "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
     #Step 6 - Credential Access
     {"RuleName": "APT29-Chrome-Password-Collector",
@@ -88,7 +94,8 @@ Rules = {
      "Mitre": ["Credential Access"],
      "KillChainTag": "Credential Access",
      "MitreTag": ["T1027", "T1105"],
-     "Context": "APT29 utilized chrome-password collectors to get password hashes and PFX certificates"
+     "Context": "APT29 utilized chrome-password collectors to get password hashes and PFX certificates",
+     "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
     #Step 7 - Collection and Exfiltration
     {"RuleName": "APT29-Chrome-Password-Collection",
@@ -101,7 +108,8 @@ Rules = {
      "Mitre": ["Collection"],
      "KillChainTag": "Collection",
      "MitreTag": ["T1027", "T1105"],
-     "Context": "APT29 uses keyloggers and screenshots to collect and exfiltrate data from user device and session."
+     "Context": "APT29 uses keyloggers and screenshots to collect and exfiltrate data from user device and session.",
+     "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
      {"RuleName": "APT29-Exfiltration",
      "Detection": {
@@ -113,7 +121,8 @@ Rules = {
      "Mitre": ["Data Exfiltration"],
      "KillChainTag": "Exfiltration",
      "MitreTag": ["T1027", "T1105"],
-     "Context": "APT29 uses keyloggers and screenshots to collect and exfiltrate data from user device and session."
+     "Context": "APT29 uses keyloggers and screenshots to collect and exfiltrate data from user device and session.",
+     "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
     #Step 8 - Lateral Movement
     {"RuleName": "APT29-Webdav-LateralMovement",
@@ -126,7 +135,8 @@ Rules = {
      "Mitre": ["Lateral Movement"],
      "KillChainTag": "Lateral Movement",
      "MitreTag": ["T1027", "T1105"],
-     "Context": "APT29 uses webdav share to copy payloads and opens a Meterpreter shell to get session ID and user information for lateral movement"
+     "Context": "APT29 uses webdav share to copy payloads and opens a Meterpreter shell to get session ID and user information for lateral movement",
+     "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
      {"RuleName": "APT29-SeaDuke-LateralMovement",
      "Detection": {
@@ -138,7 +148,8 @@ Rules = {
      "Mitre": ["Lateral Movement"],
      "KillChainTag": "Lateral Movement",
      "MitreTag": ["T1027", "T1105"],
-     "Context": "APT29 executes SEADUKE remotely via powershell to get user information and logins."
+     "Context": "APT29 executes SEADUKE remotely via powershell to get user information and logins.",
+     "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
     #Step 9 - Collection
     {"RuleName": "APT29-Seaduke-Metasploit-Collection",
@@ -151,6 +162,7 @@ Rules = {
      "Mitre": ["Collection"],
      "KillChainTag": "Collection",
      "MitreTag": ["T1027", "T1105"],
-     "Context": "APT29 executes SEADUKE to upload exfiltration data."
+     "Context": "APT29 executes SEADUKE to upload exfiltration data.",
+     "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      }, 
 }
