@@ -36,7 +36,7 @@ Rules = {
          }
      },
      "Severity": "Medium",
-     "Mitre": ["Deploy Stealth Toolkit"],
+     "Mitre": ["Command and Control"],
      "KillChainTag": "Installation",
      "MitreTag": ["T1027", "T1105"],
      "Context": "APT29 is known for using the Pupy C2 server to deploy a Metasploit handler as part of deploying a stealth toolkit.",
@@ -52,7 +52,7 @@ Rules = {
          }
      },
      "Severity": "High",
-     "Mitre": ["Deploy Stealth Toolkit"],
+     "Mitre": ["Deploy Stealth Toolkit", "Command and Control"],
      "KillChainTag": "Installation",
      "MitreTag": ["T1027", "T1105"],
      "Context": "APT29 is known for using the Pupy C2 server to deploy Meterpreter as part of deploying a stealth toolkit.",
@@ -82,9 +82,9 @@ Rules = {
          }
      },
      "Severity": "Low",
-     "Mitre": ["Persistence"],
+     "Mitre": ["Persistence", "Execution"],
      "KillChainTag": "Persistence",
-     "MitreTag": ["T1027", "T1105"],
+     "MitreTag": ["T1059"],
      "Context": "APT29 is known for persising using the Invoke-Persistence commands.",
      "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
@@ -99,12 +99,12 @@ Rules = {
      "Severity": "Medium",
      "Mitre": ["Credential Access"],
      "KillChainTag": "Credential Access",
-     "MitreTag": ["T1027", "T1105"],
+     "MitreTag": ["T1555"],
      "Context": "APT29 utilized chrome-password collectors to get password hashes and PFX certificates",
      "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
     #Step 7 - Collection and Exfiltration
-    {"RuleName": "APT29-Chrome-Password-Collection",
+    {"RuleName": "APT29-Keylogger-Powershell-Exe",
      "Detection": {
          "Contains": {
              "CommandLine": ["Invoke-ScreenCapture;Start-Sleep -Seconds 3;View-Job -JobName \"Screenshot\"", "Get-Clipboard", "Keystroke-Check", "View-Job", "Remove-Job"],
@@ -112,9 +112,9 @@ Rules = {
          }
      },
      "Severity": "High",
-     "Mitre": ["Collection"],
+     "Mitre": ["Collection", "Credential Access"],
      "KillChainTag": "Collection",
-     "MitreTag": ["T1027", "T1105"],
+     "MitreTag": ["T1056", "T1113"],
      "Context": "APT29 uses keyloggers and screenshots to collect and exfiltrate data from user device and session.",
      "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
@@ -128,7 +128,7 @@ Rules = {
       "Severity": "Low",
      "Mitre": ["Data Exfiltration"],
      "KillChainTag": "Exfiltration",
-     "MitreTag": ["T1027", "T1105"],
+     "MitreTag": ["T1059"],
      "Context": "APT29 uses keyloggers and screenshots to collect and exfiltrate data from user device and session.",
      "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
@@ -141,9 +141,9 @@ Rules = {
          }
      },
      "Severity": "Medium",
-     "Mitre": ["Lateral Movement"],
+     "Mitre": ["Lateral Movement", "Credential Access"],
      "KillChainTag": "Lateral Movement",
-     "MitreTag": ["T1027", "T1105"],
+     "MitreTag": ["T1187"],
      "Context": "APT29 uses webdav share to copy payloads and opens a Meterpreter shell to get session ID and user information for lateral movement",
      "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
@@ -155,7 +155,7 @@ Rules = {
          }
      },
       "Severity": "Critical",
-     "Mitre": ["Lateral Movement"],
+     "Mitre": ["Lateral Movement", "Command and Control"],
      "KillChainTag": "Lateral Movement",
      "MitreTag": ["T1027", "T1105"],
      "Context": "APT29 executes SEADUKE remotely via powershell to get user information and logins.",
@@ -170,7 +170,7 @@ Rules = {
          }
      },
      "Severity": "Critical",
-     "Mitre": ["Collection"],
+     "Mitre": ["Collection", "Command and Control"],
      "KillChainTag": "Collection",
      "MitreTag": ["T1027", "T1105"],
      "Context": "APT29 executes SEADUKE to upload exfiltration data.",
