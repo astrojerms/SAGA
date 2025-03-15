@@ -7,6 +7,7 @@ Rules = {
              "SourceImage": ["powershell.exe"],
          }
      },
+     "Severity": "High", 
      "Mitre": ["Initial Breach", "Command and Control", "Web Protocols"],
      "KillChainTag": "Delivery",
      "MitreTag": "T1071",
@@ -20,13 +21,13 @@ Rules = {
              "SourceImage": ["powershell.exe"],
          }
      },
+     "Severity": "Medium",
      "Mitre": ["Rapid Collect and Exfiltration", "Exfiltration"],
      "KillChainTag": "Installation",
      "MitreTag": "T1646",
      "Context": "APT29 is known for using the Pupy C2 server with Draft.zip. They are known to use a command to download and run Draft.zip in AppData directory",
      "Source": "https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/"
      },
-    #TODO: change content except rulename 
     {"RuleName": "Metasploit_Handler",
      "Detection": {
          "Contains": {
@@ -34,6 +35,7 @@ Rules = {
              "SourceImage": ["powershell", "shell"],
          }
      },
+     "Severity": "Medium",
      "Mitre": ["Deploy Stealth Toolkit"],
      "KillChainTag": "Installation",
      "MitreTag": ["T1027", "T1105"],
@@ -49,6 +51,7 @@ Rules = {
              "SourceImage": ["powershell.exe"],
          }
      },
+     "Severity": "High",
      "Mitre": ["Deploy Stealth Toolkit"],
      "KillChainTag": "Installation",
      "MitreTag": ["T1027", "T1105"],
@@ -63,6 +66,7 @@ Rules = {
              "SourceImage": ["powershell.exe"],
          }
      },
+     "Severity": "High",
      "Mitre": ["Defense Evasion and Discovery"],
      "KillChainTag": "Defense Evasion",
      "MitreTag": ["T1027", "T1105"],
@@ -77,6 +81,7 @@ Rules = {
              "SourceImage": ["powershell.exe"],
          }
      },
+     "Severity": "Low",
      "Mitre": ["Persistence"],
      "KillChainTag": "Persistence",
      "MitreTag": ["T1027", "T1105"],
@@ -91,6 +96,7 @@ Rules = {
              "SourceImage": ["powershell.exe"],
          }
      },
+     "Severity": "Medium",
      "Mitre": ["Credential Access"],
      "KillChainTag": "Credential Access",
      "MitreTag": ["T1027", "T1105"],
@@ -105,6 +111,7 @@ Rules = {
              "SourceImage": ["powershell.exe"],
          }
      },
+     "Severity": "High",
      "Mitre": ["Collection"],
      "KillChainTag": "Collection",
      "MitreTag": ["T1027", "T1105"],
@@ -118,6 +125,7 @@ Rules = {
              "SourceImage": ["powershell.exe"],
          }
      },
+      "Severity": "Low",
      "Mitre": ["Data Exfiltration"],
      "KillChainTag": "Exfiltration",
      "MitreTag": ["T1027", "T1105"],
@@ -132,6 +140,7 @@ Rules = {
              "SourceImage": ["powershell.exe"],
          }
      },
+     "Severity": "Medium",
      "Mitre": ["Lateral Movement"],
      "KillChainTag": "Lateral Movement",
      "MitreTag": ["T1027", "T1105"],
@@ -145,6 +154,7 @@ Rules = {
              "SourceImage": ["powershell.exe"],
          }
      },
+      "Severity": "Critical",
      "Mitre": ["Lateral Movement"],
      "KillChainTag": "Lateral Movement",
      "MitreTag": ["T1027", "T1105"],
@@ -159,6 +169,7 @@ Rules = {
              "SourceImage": ["powershell.exe"],
          }
      },
+     "Severity": "Critical",
      "Mitre": ["Collection"],
      "KillChainTag": "Collection",
      "MitreTag": ["T1027", "T1105"],
