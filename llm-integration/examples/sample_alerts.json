@@ -1,0 +1,34 @@
+[
+    {
+      "id": "SEC-2025-03129",
+      "timestamp": "2025-03-21T15:30:45Z",
+      "source": "Endpoint Detection System",
+      "description": "Multiple failed authentication attempts detected from unusual IP address",
+      "severity": "High",
+      "raw_data": "User: admin, IP: 203.0.113.100, Failed attempts: 25, Time window: 180 seconds, Source country: Ukraine"
+    },
+    {
+      "id": "SEC-2025-03130",
+      "timestamp": "2025-03-21T16:42:12Z",
+      "source": "File Integrity Monitoring",
+      "description": "Critical system file modified outside of change window",
+      "severity": "Critical",
+      "raw_data": "File: /etc/passwd, Modification time: 2025-03-21T03:14:15Z, User: system, Process: unknown"
+    },
+    {
+      "id": "SEC-2025-03131",
+      "timestamp": "2025-03-21T18:15:33Z",
+      "source": "Network IDS",
+      "description": "Unusual outbound data transfer detected",
+      "severity": "Medium",
+      "raw_data": "Source: 10.12.43.78, Destination: 198.51.100.23, Port: 443, Protocol: HTTPS, Data volume: 2.3GB, Normal daily average: 150MB"
+    },
+    {
+      "id": "SEC-2025-03132",
+      "timestamp": "2025-03-21T19:22:05Z",
+      "source": "Email Security Gateway",
+      "description": "Phishing email detected and quarantined",
+      "severity": "Medium",
+      "raw_data": "Recipient: finance@company.com, Subject: Urgent Invoice Payment, Attachments: invoice.xls (contains macros), Sender: accounting@c0mpany.com"
+    }
+  ]

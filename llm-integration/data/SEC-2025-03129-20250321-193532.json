@@ -1,0 +1,48 @@
+{
+  "original_alert": {
+    "id": "SEC-2025-03129",
+    "timestamp": "2025-03-21T19:35:20.88031-07:00",
+    "source": "Endpoint Detection System",
+    "description": "Multiple failed authentication attempts detected from unusual IP address",
+    "severity": "High",
+    "raw_data": "User: admin, IP: 203.0.113.100, Failed attempts: 25, Time window: 180 seconds, Source country: Ukraine"
+  },
+  "enhanced_context": "This alert indicates a potential brute force attack targeting an administrator account from a Ukrainian IP address (203.0.113.100). The attacker attempted to authenticate as the 'admin' user 25 times within a 3-minute window (180 seconds), which is an unusually high frequency and suggests automated tools are being used. This activity could be part of a broader campaign to gain unauthorized access to your systems by compromising an administrative account, which would grant the attacker elevated privileges. The source IP address 203.0.113.100 (which falls in a documentation/example range) should be investigated to determine if it's associated with known threat actors or if your organization has any legitimate business with Ukrainian entities.",
+  "possible_techniques": [
+    {
+      "id": "T1110",
+      "name": "Brute Force",
+      "description": "Adversaries are attempting to gain access to an account by guessing credentials, as evidenced by the high number of failed attempts in a short timeframe",
+      "confidence": 0.95
+    },
+    {
+      "id": "T1110.001",
+      "name": "Password Guessing",
+      "description": "Adversaries may use a single or small list of commonly used passwords against many accounts to attempt to acquire valid credentials",
+      "confidence": 0.85
+    },
+    {
+      "id": "T1110.003",
+      "name": "Password Spraying",
+      "description": "Adversaries may use a single password against multiple accounts before moving on to another password",
+      "confidence": 0.65
+    },
+    {
+      "id": "T1078",
+      "name": "Valid Accounts",
+      "description": "Adversaries are attempting to obtain and abuse credentials of existing accounts, specifically targeting an admin account",
+      "confidence": 0.8
+    }
+  ],
+  "recommended_actions": [
+    "Immediately block the source IP address (203.0.113.100) at the firewall/network perimeter",
+    "Verify the admin account wasn't compromised by checking for any successful logins around the same timeframe",
+    "Enable account lockout policies if not already in place to mitigate brute force attacks",
+    "Implement multi-factor authentication for all administrative accounts",
+    "Review authentication logs for similar patterns from other source IPs that might indicate a coordinated attack",
+    "Check if this IP address is associated with known threat actors or appears in threat intelligence feeds",
+    "Consider implementing CAPTCHA or increasing authentication timeout periods after multiple failed attempts",
+    "Alert the admin user to change their password if there's any indication of compromise"
+  ],
+  "processed_at": "2025-03-21T19:35:32.090801-07:00"
+}
