@@ -1,0 +1,49 @@
+{
+  "original_alert": {
+    "id": "SEC-2025-03129",
+    "timestamp": "2025-03-21T20:11:24.302249-07:00",
+    "source": "Endpoint Detection System",
+    "description": "Multiple failed authentication attempts detected from unusual IP address",
+    "severity": "High",
+    "raw_data": "User: admin, IP: 203.0.113.100, Failed attempts: 25, Time window: 180 seconds, Source country: Ukraine"
+  },
+  "enhanced_context": "This alert indicates a potential brute force attack targeting the 'admin' account from an IP address in Ukraine. There were 25 failed authentication attempts within a 3-minute window, which is an unusually high number within such a short timeframe. This pattern suggests an automated tool attempting to gain unauthorized access to the admin account by trying multiple password combinations. The severity is appropriately marked as high because the target is a privileged account, which if compromised, could lead to significant system access. The source IP (203.0.113.100) should be investigated to determine if it's associated with known threat actors or if there's any legitimate reason for connection attempts from Ukraine.",
+  "possible_techniques": [
+    {
+      "id": "T1110.001",
+      "name": "Brute Force: Password Guessing",
+      "description": "Adversaries are attempting to guess the password for the admin account through numerous login attempts",
+      "confidence": 0.85
+    },
+    {
+      "id": "T1110.004",
+      "name": "Brute Force: Credential Stuffing",
+      "description": "Adversaries may be using previously breached username/password pairs to attempt account access",
+      "confidence": 0.6
+    },
+    {
+      "id": "T1078.004",
+      "name": "Valid Accounts: Cloud Accounts",
+      "description": "Adversaries may attempt to gain access to cloud-based admin accounts",
+      "confidence": 0.5
+    },
+    {
+      "id": "T1133",
+      "name": "External Remote Services",
+      "description": "Adversaries may attempt to leverage external-facing remote services for initial access",
+      "confidence": 0.45
+    }
+  ],
+  "recommended_actions": [
+    "Immediately block the IP address 203.0.113.100 at the firewall or network perimeter",
+    "Verify that the admin account has not been compromised; review any successful logins around this timeframe",
+    "Implement account lockout policies if not already in place",
+    "Enable multi-factor authentication for the admin account and all privileged accounts",
+    "Review authentication logs for other suspicious activities from this IP address or targeting this admin account",
+    "Check for other IP addresses from Ukraine or unusual geographic locations attempting similar authentication patterns",
+    "Consider implementing IP-based access controls for administrative interfaces",
+    "Update password policy to enforce strong, complex passwords",
+    "Create a threat intelligence report on this IP address and share with the security community"
+  ],
+  "processed_at": "2025-03-21T20:11:35.327376-07:00"
+}
