@@ -1,8 +1,10 @@
 *.zip
 
+# Go backend
 bin/
 tmp/
 build-errors.log
+.env
 
 .terraform
 

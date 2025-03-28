@@ -1,0 +1,213 @@
+[
+  {
+    "id":1,
+    "name":"APT29-Deploy-Stealth-Toolkit",
+    "description":"APT29 is known for using the Pupy C2 server to deploy Meterpreter as part of deploying a stealth toolkit.",
+    "entries": {
+      "1": {
+        "Log": {
+        "logId": "71D02E62-8079-4B52-A9BC-EECDB7D02DD3",
+        "NormType": 22,
+        "EventType": 22,
+        "EventTime": "2025-03-17 10:05:12",
+        "EventId": 22,
+        "port": 51522,
+        "SourceImage": "powershell.exe",
+        "TargetImage": "",
+        "Image": "",
+        "AccountName": "USER01",
+        "SourceIp": "",
+        "TargetIp": "",
+        "Message": "Dns query:\r\nQueryName: c2.pupy.apt29.com\r\nQueryStatus: 0\r\nQueryResults: 203.0.113.22;\r\nImage: C:\\Windows\\System32\\powershell.exe",
+        "ProcessId": ""
+        }
+      },
+      "2": {
+        "Log": {
+          "logId": "1E4FCE53-5CB9-47CC-891B-8C7ED0B02939",
+          "NormType": 12,
+          "EventType": 12,
+          "EventTime": "2025-03-17 10:07:30",
+          "EventId": 12,
+          "port": 51789,
+          "SourceImage": "powershell.exe",
+          "TargetImage": "",
+          "Image": "",
+          "AccountName": "USER01",
+          "SourceIp": "",
+          "TargetIp": "",
+          "Message": "Registry object added:\r\nTargetObject: HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\DraftZipLoader\r\nDetails: REG_SZ C:\\Users\\USER01\\AppData\\Roaming\\Draft.zip",
+          "ProcessId": "",
+          "CommandLine": "AppData\\Roaming\\Draft.Zip"
+        },
+        "Alert": {
+          "RuleName": "APT29_Draft_Zip_Powershell",
+          "Severity": "Medium",
+          "Mitre": ["Rapid Collect and Exfiltration", "Exfiltration"],
+          "KillChainTag": "Installation",
+          "MitreTag": "T1646",
+          "Context": "APT29 is known for using the Pupy C2 server with Draft.zip. They are known to use a command to download and run Draft.zip in AppData directory",
+        }
+      },
+      "3": {
+        "Logs": {
+            "LogID": "3D5C4FA9-291C-4EEB-BDC3-90979164629A",
+            "NormType": 4688,
+            "EventType": 4688,
+            "EventTime": "2025-03-17 10:10:45",
+            "EventID": 4688,
+            "host": "victim-pc.local",
+            "port": 52005,
+            "Message": "A new process has been created.\r\nNew Process Name: C:\\Windows\\System32\\cmd.exe\r\nProcess Command Line: handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https",
+            "AccountName": "SYSTEM",
+            "UserID": "S-1-5-18",
+            "SourceImage": "powershell",
+            "CommandLine": "handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https"
+        },
+        "Alert": {
+          "RuleName": "Metasploit_Handler",
+          "Severity": "Medium",
+          "Mitre": ["Command and Control"],
+          "KillChainTag": "Installation",
+          "MitreTag": ["T1027", "T1105"],
+          "Context": "APT29 is known for using the Pupy C2 server to deploy a Metasploit handler as part of deploying a stealth toolkit."
+        }
+      },
+      "4": {
+        "Log": {
+          "logId": "A7E09716-B058-4F9F-8691-275D828BD624",
+          "NormType": 3,
+          "EventType": 3,
+          "EventTime": "2025-03-17 10:12:57",
+          "EventId": 3,
+          "port": 52233,
+          "SourceImage": "powershell.exe",
+          "TargetImage": "",
+          "Image": "",
+          "AccountName": "SYSTEM",
+          "SourceIp": "",
+          "TargetIp": "",
+          "Message": "Network connection detected:\r\nSourceIp: 192.168.1.102\r\nSourcePort: 4444\r\nDestinationIp: 203.0.113.22\r\nDestinationPort: 443\r\nProtocol: tcp\r\nImage: C:\\Windows\\System32\\powershell.exe",
+          "ProcessId": "",
+          "CommandLine": "Set-ItemProperty -Path \"HKCU:\\Software\\Classes\\Folder\\shell\\open\\command\" -Name \"DelegateExecute\" -Force"
+        },
+        "Alert": {
+          "RuleName": "Meterpreter_Setup",
+          "Severity": "High",
+          "Mitre": ["Deploy Stealth Toolkit", "Command and Control"],
+          "KillChainTag": "Installation",
+          "MitreTag": ["T1027", "T1105"],
+          "Context": "APT29 is known for using the Pupy C2 server to deploy Meterpreter as part of deploying a stealth toolkit."
+        }
+      },
+      "5": {
+        "Log": {
+          "logId": "B6C679D3-31E7-4C5C-9AB7-3CF4FB466A89",
+          "NormType": 5145,
+          "EventType": 5145,
+          "EventTime": "2025-03-17 10:15:20",
+          "EventId": 5145,
+          "port": 52478,
+          "SourceImage": "powershell.exe",
+          "TargetImage": "",
+          "Image": "",
+          "AccountName": "USER01",
+          "SourceIp": "",
+          "TargetIp": "",
+          "Message": "Network share object checked:\r\nShare Name: \\\\victim-pc\\C$\\Users\\USER01\\AppData\\Local\\Google\\Chrome\\User Data\\Login Data",
+          "ProcessId": "",
+          "CommandLine": "run post/windows/gather/credentials/credential_collector"
+        },
+        "Alert": {
+          "RuleName": "APT29-Chrome-Password-Collector",
+          "Severity": "Medium",
+          "Mitre": ["Credential Access"],
+          "KillChainTag": "Credential Access",
+          "MitreTag": ["T1555"],
+          "Context": "APT29 utilized chrome-password collectors to get password hashes and PFX certificates"
+        }
+      },
+      "6": {
+        "Log": {
+          "logId": "ABC794C8-F416-40E3-A2AC-8CF62D6DEDB6",
+          "NormType": 4690,
+          "EventType": 4690,
+          "EventTime": "2025-03-17 10:18:40",
+          "EventId": 4690,
+          "port": 52789,
+          "SourceImage": "powershell.exe",
+          "TargetImage": "",
+          "Image": "",
+          "AccountName": "SYSTEM",
+          "SourceIp": "",
+          "TargetIp": "",
+          "Message": "A process accessed another process:\r\nSource Process: C:\\Windows\\System32\\powershell.exe\r\nTarget Process: C:\\Windows\\System32\\cmd.exe\r\nCommandLine: Invoke-Command -ComputerName target-workstation.local -Credential USER02",
+          "ProcessId": "",
+          "CommandLine": "Ad-Search Computer Name *"
+        },
+        "Alert": {
+          "RuleName": "APT29-Webdav-LateralMovement",
+          "Severity": "Medium",
+          "Mitre": ["Lateral Movement", "Credential Access"],
+          "KillChainTag": "Lateral Movement",
+          "MitreTag": ["T1187"],
+          "Context": "APT29 uses webdav share to copy payloads and opens a Meterpreter shell to get session ID and user information for lateral movement"
+        }
+      },
+      "7": {
+        "Log": {
+          "logId": "AABBA736-325C-4752-8405-3BC6E2F0DDBC",
+          "NormType": 5156,
+          "EventType": 5156,
+          "EventTime": "2025-03-17 10:20:55",
+          "EventId": 5156,
+          "port": 53012,
+          "SourceImage": "powershell.exe",
+          "TargetImage": "",
+          "Image": "",
+          "AccountName": "SYSTEM",
+          "SourceIp": "",
+          "TargetIp": "",
+          "Message": "The Windows Filtering Platform permitted a connection:\r\nSourceIp: 192.168.1.102\r\nSourcePort: 55000\r\nDestinationIp: 203.0.113.22\r\nDestinationPort: 443\r\nProtocol: https\r\nCommandLine: Invoke-Exfil",
+          "ProcessId": "",
+          "CommandLine": "Invoke-Exfil"
+        },
+        "Alert": {
+          "RuleName": "APT29-Seaduke-Metasploit-Collection",
+          "Severity": "Critical",
+          "Mitre": ["Collection", "Command and Control"],
+          "KillChainTag": "Collection",
+          "MitreTag": ["T1027", "T1105"],
+          "Context": "APT29 executes SEADUKE to upload exfiltration data."
+        }
+      },
+      "8": {
+        "Log": {
+          "logId": "A17F102C-AEFA-46DE-ABB9-BC7EE434518E",
+          "NormType": 4689,
+          "EventType": 4689,
+          "EventTime": "2025-03-17 10:25:30",
+          "EventId": 4689,
+          "port": 53345,
+          "SourceImage": "powershell.exe",
+          "TargetImage": "",
+          "Image": "",
+          "AccountName": "SYSTEM",
+          "SourceIp": "",
+          "TargetIp": "",
+          "Message": "A process has exited:\r\nProcess Name: C:\\Windows\\System32\\cmd.exe\r\nCommandLine: .\\sdelete64.exe /accepteula C:\\Users\\USER01\\AppData\\Roaming\\Draft.zip",
+          "ProcessId": "",
+          "CommandLine": ".\\sdelete64.exe /accepteula "
+        },
+        "Alert": {
+          "RuleName": "Terminate-Pupy-RAT-Proc",
+          "Severity": "High",
+          "Mitre": ["Defense Evasion and Discovery"],
+          "KillChainTag": "Defense Evasion",
+          "MitreTag": ["T1027", "T1105"],
+          "Context": "APT29 is known for using the Pupy C2 server and deleting their artifacts using meterpreter via Powershell."
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,885 @@
+ALERT: Rule 'APT29_Pupy_C2' triggered by log entry at 2025-03-17 10:05:12
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Dns query:
+QueryName: c2.pupy.apt29.com
+QueryStatus: 0
+QueryResults: 203.0.113.22;
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'APT29_Draft_Zip_Powershell' triggered by log entry at 2025-03-17 10:05:12
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Dns query:
+QueryName: c2.pupy.apt29.com
+QueryStatus: 0
+QueryResults: 203.0.113.22;
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'Metasploit_Handler' triggered by log entry at 2025-03-17 10:05:12
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Dns query:
+QueryName: c2.pupy.apt29.com
+QueryStatus: 0
+QueryResults: 203.0.113.22;
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'Meterpreter_Setup' triggered by log entry at 2025-03-17 10:05:12
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Dns query:
+QueryName: c2.pupy.apt29.com
+QueryStatus: 0
+QueryResults: 203.0.113.22;
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'Terminate-Pupy-RAT-Proc' triggered by log entry at 2025-03-17 10:05:12
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Dns query:
+QueryName: c2.pupy.apt29.com
+QueryStatus: 0
+QueryResults: 203.0.113.22;
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'Meterpreter-Persistence' triggered by log entry at 2025-03-17 10:05:12
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Dns query:
+QueryName: c2.pupy.apt29.com
+QueryStatus: 0
+QueryResults: 203.0.113.22;
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Low
+
+ALERT: Rule 'APT29-Chrome-Password-Collector' triggered by log entry at 2025-03-17 10:05:12
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Dns query:
+QueryName: c2.pupy.apt29.com
+QueryStatus: 0
+QueryResults: 203.0.113.22;
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29-Keylogger-Powershell-Exe' triggered by log entry at 2025-03-17 10:05:12
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Dns query:
+QueryName: c2.pupy.apt29.com
+QueryStatus: 0
+QueryResults: 203.0.113.22;
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'APT29-Exfiltration' triggered by log entry at 2025-03-17 10:05:12
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Dns query:
+QueryName: c2.pupy.apt29.com
+QueryStatus: 0
+QueryResults: 203.0.113.22;
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Low
+
+ALERT: Rule 'APT29-Webdav-LateralMovement' triggered by log entry at 2025-03-17 10:05:12
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Dns query:
+QueryName: c2.pupy.apt29.com
+QueryStatus: 0
+QueryResults: 203.0.113.22;
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29-SeaDuke-LateralMovement' triggered by log entry at 2025-03-17 10:05:12
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Dns query:
+QueryName: c2.pupy.apt29.com
+QueryStatus: 0
+QueryResults: 203.0.113.22;
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Critical
+
+ALERT: Rule 'APT29-Seaduke-Metasploit-Collection' triggered by log entry at 2025-03-17 10:05:12
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Dns query:
+QueryName: c2.pupy.apt29.com
+QueryStatus: 0
+QueryResults: 203.0.113.22;
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Critical
+
+ALERT: Rule 'APT29_Pupy_C2' triggered by log entry at 2025-03-17 10:07:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Registry object added:
+TargetObject: HKCU\Software\Microsoft\Windows\CurrentVersion\Run\DraftZipLoader
+Details: REG_SZ C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'APT29_Draft_Zip_Powershell' triggered by log entry at 2025-03-17 10:07:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Registry object added:
+TargetObject: HKCU\Software\Microsoft\Windows\CurrentVersion\Run\DraftZipLoader
+Details: REG_SZ C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'Metasploit_Handler' triggered by log entry at 2025-03-17 10:07:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Registry object added:
+TargetObject: HKCU\Software\Microsoft\Windows\CurrentVersion\Run\DraftZipLoader
+Details: REG_SZ C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'Meterpreter_Setup' triggered by log entry at 2025-03-17 10:07:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Registry object added:
+TargetObject: HKCU\Software\Microsoft\Windows\CurrentVersion\Run\DraftZipLoader
+Details: REG_SZ C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'Terminate-Pupy-RAT-Proc' triggered by log entry at 2025-03-17 10:07:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Registry object added:
+TargetObject: HKCU\Software\Microsoft\Windows\CurrentVersion\Run\DraftZipLoader
+Details: REG_SZ C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'Meterpreter-Persistence' triggered by log entry at 2025-03-17 10:07:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Registry object added:
+TargetObject: HKCU\Software\Microsoft\Windows\CurrentVersion\Run\DraftZipLoader
+Details: REG_SZ C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Low
+
+ALERT: Rule 'APT29-Chrome-Password-Collector' triggered by log entry at 2025-03-17 10:07:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Registry object added:
+TargetObject: HKCU\Software\Microsoft\Windows\CurrentVersion\Run\DraftZipLoader
+Details: REG_SZ C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29-Keylogger-Powershell-Exe' triggered by log entry at 2025-03-17 10:07:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Registry object added:
+TargetObject: HKCU\Software\Microsoft\Windows\CurrentVersion\Run\DraftZipLoader
+Details: REG_SZ C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'APT29-Exfiltration' triggered by log entry at 2025-03-17 10:07:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Registry object added:
+TargetObject: HKCU\Software\Microsoft\Windows\CurrentVersion\Run\DraftZipLoader
+Details: REG_SZ C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Low
+
+ALERT: Rule 'APT29-Webdav-LateralMovement' triggered by log entry at 2025-03-17 10:07:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Registry object added:
+TargetObject: HKCU\Software\Microsoft\Windows\CurrentVersion\Run\DraftZipLoader
+Details: REG_SZ C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29-SeaDuke-LateralMovement' triggered by log entry at 2025-03-17 10:07:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Registry object added:
+TargetObject: HKCU\Software\Microsoft\Windows\CurrentVersion\Run\DraftZipLoader
+Details: REG_SZ C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Critical
+
+ALERT: Rule 'APT29-Seaduke-Metasploit-Collection' triggered by log entry at 2025-03-17 10:07:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Registry object added:
+TargetObject: HKCU\Software\Microsoft\Windows\CurrentVersion\Run\DraftZipLoader
+Details: REG_SZ C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Critical
+
+ALERT: Rule 'Metasploit_Handler' triggered by log entry at 2025-03-17 10:10:45
+    SourceImage: powershell
+    TargetImage: 
+    Message: A new process has been created.
+New Process Name: C:\Windows\System32\cmd.exe
+Process Command Line: handler -H 0.0.0.0 -P 443 -p windows/x64/meterpreter/reverse_https
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29_Pupy_C2' triggered by log entry at 2025-03-17 10:12:57
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network connection detected:
+SourceIp: 192.168.1.102
+SourcePort: 4444
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: tcp
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'APT29_Draft_Zip_Powershell' triggered by log entry at 2025-03-17 10:12:57
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network connection detected:
+SourceIp: 192.168.1.102
+SourcePort: 4444
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: tcp
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'Metasploit_Handler' triggered by log entry at 2025-03-17 10:12:57
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network connection detected:
+SourceIp: 192.168.1.102
+SourcePort: 4444
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: tcp
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'Meterpreter_Setup' triggered by log entry at 2025-03-17 10:12:57
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network connection detected:
+SourceIp: 192.168.1.102
+SourcePort: 4444
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: tcp
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'Terminate-Pupy-RAT-Proc' triggered by log entry at 2025-03-17 10:12:57
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network connection detected:
+SourceIp: 192.168.1.102
+SourcePort: 4444
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: tcp
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'Meterpreter-Persistence' triggered by log entry at 2025-03-17 10:12:57
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network connection detected:
+SourceIp: 192.168.1.102
+SourcePort: 4444
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: tcp
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Low
+
+ALERT: Rule 'APT29-Chrome-Password-Collector' triggered by log entry at 2025-03-17 10:12:57
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network connection detected:
+SourceIp: 192.168.1.102
+SourcePort: 4444
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: tcp
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29-Keylogger-Powershell-Exe' triggered by log entry at 2025-03-17 10:12:57
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network connection detected:
+SourceIp: 192.168.1.102
+SourcePort: 4444
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: tcp
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'APT29-Exfiltration' triggered by log entry at 2025-03-17 10:12:57
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network connection detected:
+SourceIp: 192.168.1.102
+SourcePort: 4444
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: tcp
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Low
+
+ALERT: Rule 'APT29-Webdav-LateralMovement' triggered by log entry at 2025-03-17 10:12:57
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network connection detected:
+SourceIp: 192.168.1.102
+SourcePort: 4444
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: tcp
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29-SeaDuke-LateralMovement' triggered by log entry at 2025-03-17 10:12:57
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network connection detected:
+SourceIp: 192.168.1.102
+SourcePort: 4444
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: tcp
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Critical
+
+ALERT: Rule 'APT29-Seaduke-Metasploit-Collection' triggered by log entry at 2025-03-17 10:12:57
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network connection detected:
+SourceIp: 192.168.1.102
+SourcePort: 4444
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: tcp
+Image: C:\Windows\System32\powershell.exe
+END MESSAGE
+    Severity: Critical
+
+ALERT: Rule 'APT29_Pupy_C2' triggered by log entry at 2025-03-17 10:15:20
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network share object checked:
+Share Name: \\victim-pc\C$\Users\USER01\AppData\Local\Google\Chrome\User Data\Login Data
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'APT29_Draft_Zip_Powershell' triggered by log entry at 2025-03-17 10:15:20
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network share object checked:
+Share Name: \\victim-pc\C$\Users\USER01\AppData\Local\Google\Chrome\User Data\Login Data
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'Metasploit_Handler' triggered by log entry at 2025-03-17 10:15:20
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network share object checked:
+Share Name: \\victim-pc\C$\Users\USER01\AppData\Local\Google\Chrome\User Data\Login Data
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'Meterpreter_Setup' triggered by log entry at 2025-03-17 10:15:20
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network share object checked:
+Share Name: \\victim-pc\C$\Users\USER01\AppData\Local\Google\Chrome\User Data\Login Data
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'Terminate-Pupy-RAT-Proc' triggered by log entry at 2025-03-17 10:15:20
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network share object checked:
+Share Name: \\victim-pc\C$\Users\USER01\AppData\Local\Google\Chrome\User Data\Login Data
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'Meterpreter-Persistence' triggered by log entry at 2025-03-17 10:15:20
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network share object checked:
+Share Name: \\victim-pc\C$\Users\USER01\AppData\Local\Google\Chrome\User Data\Login Data
+END MESSAGE
+    Severity: Low
+
+ALERT: Rule 'APT29-Chrome-Password-Collector' triggered by log entry at 2025-03-17 10:15:20
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network share object checked:
+Share Name: \\victim-pc\C$\Users\USER01\AppData\Local\Google\Chrome\User Data\Login Data
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29-Keylogger-Powershell-Exe' triggered by log entry at 2025-03-17 10:15:20
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network share object checked:
+Share Name: \\victim-pc\C$\Users\USER01\AppData\Local\Google\Chrome\User Data\Login Data
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'APT29-Exfiltration' triggered by log entry at 2025-03-17 10:15:20
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network share object checked:
+Share Name: \\victim-pc\C$\Users\USER01\AppData\Local\Google\Chrome\User Data\Login Data
+END MESSAGE
+    Severity: Low
+
+ALERT: Rule 'APT29-Webdav-LateralMovement' triggered by log entry at 2025-03-17 10:15:20
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network share object checked:
+Share Name: \\victim-pc\C$\Users\USER01\AppData\Local\Google\Chrome\User Data\Login Data
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29-SeaDuke-LateralMovement' triggered by log entry at 2025-03-17 10:15:20
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network share object checked:
+Share Name: \\victim-pc\C$\Users\USER01\AppData\Local\Google\Chrome\User Data\Login Data
+END MESSAGE
+    Severity: Critical
+
+ALERT: Rule 'APT29-Seaduke-Metasploit-Collection' triggered by log entry at 2025-03-17 10:15:20
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: Network share object checked:
+Share Name: \\victim-pc\C$\Users\USER01\AppData\Local\Google\Chrome\User Data\Login Data
+END MESSAGE
+    Severity: Critical
+
+ALERT: Rule 'APT29_Pupy_C2' triggered by log entry at 2025-03-17 10:18:40
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process accessed another process:
+Source Process: C:\Windows\System32\powershell.exe
+Target Process: C:\Windows\System32\cmd.exe
+CommandLine: Invoke-Command -ComputerName target-workstation.local -Credential USER02
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'APT29_Draft_Zip_Powershell' triggered by log entry at 2025-03-17 10:18:40
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process accessed another process:
+Source Process: C:\Windows\System32\powershell.exe
+Target Process: C:\Windows\System32\cmd.exe
+CommandLine: Invoke-Command -ComputerName target-workstation.local -Credential USER02
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'Metasploit_Handler' triggered by log entry at 2025-03-17 10:18:40
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process accessed another process:
+Source Process: C:\Windows\System32\powershell.exe
+Target Process: C:\Windows\System32\cmd.exe
+CommandLine: Invoke-Command -ComputerName target-workstation.local -Credential USER02
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'Meterpreter_Setup' triggered by log entry at 2025-03-17 10:18:40
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process accessed another process:
+Source Process: C:\Windows\System32\powershell.exe
+Target Process: C:\Windows\System32\cmd.exe
+CommandLine: Invoke-Command -ComputerName target-workstation.local -Credential USER02
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'Terminate-Pupy-RAT-Proc' triggered by log entry at 2025-03-17 10:18:40
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process accessed another process:
+Source Process: C:\Windows\System32\powershell.exe
+Target Process: C:\Windows\System32\cmd.exe
+CommandLine: Invoke-Command -ComputerName target-workstation.local -Credential USER02
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'Meterpreter-Persistence' triggered by log entry at 2025-03-17 10:18:40
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process accessed another process:
+Source Process: C:\Windows\System32\powershell.exe
+Target Process: C:\Windows\System32\cmd.exe
+CommandLine: Invoke-Command -ComputerName target-workstation.local -Credential USER02
+END MESSAGE
+    Severity: Low
+
+ALERT: Rule 'APT29-Chrome-Password-Collector' triggered by log entry at 2025-03-17 10:18:40
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process accessed another process:
+Source Process: C:\Windows\System32\powershell.exe
+Target Process: C:\Windows\System32\cmd.exe
+CommandLine: Invoke-Command -ComputerName target-workstation.local -Credential USER02
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29-Keylogger-Powershell-Exe' triggered by log entry at 2025-03-17 10:18:40
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process accessed another process:
+Source Process: C:\Windows\System32\powershell.exe
+Target Process: C:\Windows\System32\cmd.exe
+CommandLine: Invoke-Command -ComputerName target-workstation.local -Credential USER02
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'APT29-Exfiltration' triggered by log entry at 2025-03-17 10:18:40
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process accessed another process:
+Source Process: C:\Windows\System32\powershell.exe
+Target Process: C:\Windows\System32\cmd.exe
+CommandLine: Invoke-Command -ComputerName target-workstation.local -Credential USER02
+END MESSAGE
+    Severity: Low
+
+ALERT: Rule 'APT29-Webdav-LateralMovement' triggered by log entry at 2025-03-17 10:18:40
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process accessed another process:
+Source Process: C:\Windows\System32\powershell.exe
+Target Process: C:\Windows\System32\cmd.exe
+CommandLine: Invoke-Command -ComputerName target-workstation.local -Credential USER02
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29-SeaDuke-LateralMovement' triggered by log entry at 2025-03-17 10:18:40
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process accessed another process:
+Source Process: C:\Windows\System32\powershell.exe
+Target Process: C:\Windows\System32\cmd.exe
+CommandLine: Invoke-Command -ComputerName target-workstation.local -Credential USER02
+END MESSAGE
+    Severity: Critical
+
+ALERT: Rule 'APT29-Seaduke-Metasploit-Collection' triggered by log entry at 2025-03-17 10:18:40
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process accessed another process:
+Source Process: C:\Windows\System32\powershell.exe
+Target Process: C:\Windows\System32\cmd.exe
+CommandLine: Invoke-Command -ComputerName target-workstation.local -Credential USER02
+END MESSAGE
+    Severity: Critical
+
+ALERT: Rule 'APT29_Pupy_C2' triggered by log entry at 2025-03-17 10:20:55
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: The Windows Filtering Platform permitted a connection:
+SourceIp: 192.168.1.102
+SourcePort: 55000
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: https
+CommandLine: Invoke-Exfil
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'APT29_Draft_Zip_Powershell' triggered by log entry at 2025-03-17 10:20:55
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: The Windows Filtering Platform permitted a connection:
+SourceIp: 192.168.1.102
+SourcePort: 55000
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: https
+CommandLine: Invoke-Exfil
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'Metasploit_Handler' triggered by log entry at 2025-03-17 10:20:55
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: The Windows Filtering Platform permitted a connection:
+SourceIp: 192.168.1.102
+SourcePort: 55000
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: https
+CommandLine: Invoke-Exfil
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'Meterpreter_Setup' triggered by log entry at 2025-03-17 10:20:55
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: The Windows Filtering Platform permitted a connection:
+SourceIp: 192.168.1.102
+SourcePort: 55000
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: https
+CommandLine: Invoke-Exfil
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'Terminate-Pupy-RAT-Proc' triggered by log entry at 2025-03-17 10:20:55
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: The Windows Filtering Platform permitted a connection:
+SourceIp: 192.168.1.102
+SourcePort: 55000
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: https
+CommandLine: Invoke-Exfil
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'Meterpreter-Persistence' triggered by log entry at 2025-03-17 10:20:55
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: The Windows Filtering Platform permitted a connection:
+SourceIp: 192.168.1.102
+SourcePort: 55000
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: https
+CommandLine: Invoke-Exfil
+END MESSAGE
+    Severity: Low
+
+ALERT: Rule 'APT29-Chrome-Password-Collector' triggered by log entry at 2025-03-17 10:20:55
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: The Windows Filtering Platform permitted a connection:
+SourceIp: 192.168.1.102
+SourcePort: 55000
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: https
+CommandLine: Invoke-Exfil
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29-Keylogger-Powershell-Exe' triggered by log entry at 2025-03-17 10:20:55
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: The Windows Filtering Platform permitted a connection:
+SourceIp: 192.168.1.102
+SourcePort: 55000
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: https
+CommandLine: Invoke-Exfil
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'APT29-Exfiltration' triggered by log entry at 2025-03-17 10:20:55
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: The Windows Filtering Platform permitted a connection:
+SourceIp: 192.168.1.102
+SourcePort: 55000
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: https
+CommandLine: Invoke-Exfil
+END MESSAGE
+    Severity: Low
+
+ALERT: Rule 'APT29-Webdav-LateralMovement' triggered by log entry at 2025-03-17 10:20:55
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: The Windows Filtering Platform permitted a connection:
+SourceIp: 192.168.1.102
+SourcePort: 55000
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: https
+CommandLine: Invoke-Exfil
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29-SeaDuke-LateralMovement' triggered by log entry at 2025-03-17 10:20:55
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: The Windows Filtering Platform permitted a connection:
+SourceIp: 192.168.1.102
+SourcePort: 55000
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: https
+CommandLine: Invoke-Exfil
+END MESSAGE
+    Severity: Critical
+
+ALERT: Rule 'APT29-Seaduke-Metasploit-Collection' triggered by log entry at 2025-03-17 10:20:55
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: The Windows Filtering Platform permitted a connection:
+SourceIp: 192.168.1.102
+SourcePort: 55000
+DestinationIp: 203.0.113.22
+DestinationPort: 443
+Protocol: https
+CommandLine: Invoke-Exfil
+END MESSAGE
+    Severity: Critical
+
+ALERT: Rule 'APT29_Pupy_C2' triggered by log entry at 2025-03-17 10:25:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process has exited:
+Process Name: C:\Windows\System32\cmd.exe
+CommandLine: .\sdelete64.exe /accepteula C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'APT29_Draft_Zip_Powershell' triggered by log entry at 2025-03-17 10:25:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process has exited:
+Process Name: C:\Windows\System32\cmd.exe
+CommandLine: .\sdelete64.exe /accepteula C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'Metasploit_Handler' triggered by log entry at 2025-03-17 10:25:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process has exited:
+Process Name: C:\Windows\System32\cmd.exe
+CommandLine: .\sdelete64.exe /accepteula C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'Meterpreter_Setup' triggered by log entry at 2025-03-17 10:25:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process has exited:
+Process Name: C:\Windows\System32\cmd.exe
+CommandLine: .\sdelete64.exe /accepteula C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'Terminate-Pupy-RAT-Proc' triggered by log entry at 2025-03-17 10:25:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process has exited:
+Process Name: C:\Windows\System32\cmd.exe
+CommandLine: .\sdelete64.exe /accepteula C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'Meterpreter-Persistence' triggered by log entry at 2025-03-17 10:25:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process has exited:
+Process Name: C:\Windows\System32\cmd.exe
+CommandLine: .\sdelete64.exe /accepteula C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Low
+
+ALERT: Rule 'APT29-Chrome-Password-Collector' triggered by log entry at 2025-03-17 10:25:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process has exited:
+Process Name: C:\Windows\System32\cmd.exe
+CommandLine: .\sdelete64.exe /accepteula C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29-Keylogger-Powershell-Exe' triggered by log entry at 2025-03-17 10:25:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process has exited:
+Process Name: C:\Windows\System32\cmd.exe
+CommandLine: .\sdelete64.exe /accepteula C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: High
+
+ALERT: Rule 'APT29-Exfiltration' triggered by log entry at 2025-03-17 10:25:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process has exited:
+Process Name: C:\Windows\System32\cmd.exe
+CommandLine: .\sdelete64.exe /accepteula C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Low
+
+ALERT: Rule 'APT29-Webdav-LateralMovement' triggered by log entry at 2025-03-17 10:25:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process has exited:
+Process Name: C:\Windows\System32\cmd.exe
+CommandLine: .\sdelete64.exe /accepteula C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Medium
+
+ALERT: Rule 'APT29-SeaDuke-LateralMovement' triggered by log entry at 2025-03-17 10:25:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process has exited:
+Process Name: C:\Windows\System32\cmd.exe
+CommandLine: .\sdelete64.exe /accepteula C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Critical
+
+ALERT: Rule 'APT29-Seaduke-Metasploit-Collection' triggered by log entry at 2025-03-17 10:25:30
+    SourceImage: powershell.exe
+    TargetImage: 
+    Message: A process has exited:
+Process Name: C:\Windows\System32\cmd.exe
+CommandLine: .\sdelete64.exe /accepteula C:\Users\USER01\AppData\Roaming\Draft.zip
+END MESSAGE
+    Severity: Critical
+
