@@ -40,15 +40,19 @@ type Alert struct {
 }
 
 type Entry struct {
-	Log   *Log   `json:"Log,omitempty"`
-	Logs  *Log   `json:"Logs,omitempty"`
-	Alert *Alert `json:"Alert,omitempty"`
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	Severity    string `json:"severity"`
+	Log         *Log   `json:"Log,omitempty"`
+	Logs        *Log   `json:"Logs,omitempty"`
+	Alert       *Alert `json:"Alert,omitempty"`
 }
 
 type Event struct {
 	ID          int              `json:"id"`
 	Name        string           `json:"name"`
 	Description string           `json:"description"`
+	Severity    string           `json:"severity"`
 	Entries     map[string]Entry `json:"entries"`
 }
 
@@ -56,6 +60,7 @@ type EventResponse struct {
 	ID          int    `json:"id"`
 	Name        string `json:"name"`
 	Description string `json:"description"`
+	Severity    string `json:"severity"`
 }
 
 var events []Event
@@ -127,6 +132,7 @@ func getEventResponse(events []Event) []EventResponse {
 			ID:          e.ID,
 			Name:        e.Name,
 			Description: e.Description,
+			Severity:    e.Severity,
 		})
 	}
 	return responses

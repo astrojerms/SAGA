@@ -3,26 +3,33 @@
     "id":1,
     "name":"APT29-Deploy-Stealth-Toolkit",
     "description":"APT29 is known for using the Pupy C2 server to deploy Meterpreter as part of deploying a stealth toolkit.",
+    "severity":"critical",
     "entries": {
       "1": {
+        "name": "DNS Lookup for C2 Server",
+        "description": "The attacker’s PowerShell process initiated a DNS query to c2.pupy.apt29.com, a known command-and-control domain used by APT29 malware.",
+        "severity": "",
         "Log": {
-        "logId": "71D02E62-8079-4B52-A9BC-EECDB7D02DD3",
-        "NormType": 22,
-        "EventType": 22,
-        "EventTime": "2025-03-17 10:05:12",
-        "EventId": 22,
-        "port": 51522,
-        "SourceImage": "powershell.exe",
-        "TargetImage": "",
-        "Image": "",
-        "AccountName": "USER01",
-        "SourceIp": "",
-        "TargetIp": "",
-        "Message": "Dns query:\r\nQueryName: c2.pupy.apt29.com\r\nQueryStatus: 0\r\nQueryResults: 203.0.113.22;\r\nImage: C:\\Windows\\System32\\powershell.exe",
-        "ProcessId": ""
+          "logId": "71D02E62-8079-4B52-A9BC-EECDB7D02DD3",
+          "NormType": 22,
+          "EventType": 22,
+          "EventTime": "2025-03-17 10:05:12",
+          "EventId": 22,
+          "port": 51522,
+          "SourceImage": "powershell.exe",
+          "TargetImage": "",
+          "Image": "",
+          "AccountName": "USER01",
+          "SourceIp": "",
+          "TargetIp": "",
+          "Message": "Dns query:\r\nQueryName: c2.pupy.apt29.com\r\nQueryStatus: 0\r\nQueryResults: 203.0.113.22;\r\nImage: C:\\Windows\\System32\\powershell.exe",
+          "ProcessId": ""
         }
       },
       "2": {
+        "name": "Persistence via Draft.zip",
+        "description": "PowerShell was used to configure a registry run key pointing to Draft.zip in the user’s AppData folder, indicating persistence setup by malware.",
+        "severity": "Medium",
         "Log": {
           "logId": "1E4FCE53-5CB9-47CC-891B-8C7ED0B02939",
           "NormType": 12,
@@ -50,6 +57,9 @@
         }
       },
       "3": {
+        "name": "Metasploit Handler Started",
+        "description": "A new command-line process (cmd.exe) was launched with parameters to start a Metasploit handler, used for receiving a reverse shell connection.",
+        "severity": "Medium",
         "Logs": {
             "LogID": "3D5C4FA9-291C-4EEB-BDC3-90979164629A",
             "NormType": 4688,
@@ -74,6 +84,9 @@
         }
       },
       "4": {
+        "name": "Stealth Toolkit Setup",
+        "description": "PowerShell attempted to modify Windows shell behavior using a registry change (DelegateExecute), which is part of a stealth persistence technique used by Meterpreter.",
+        "severity": "High",
         "Log": {
           "logId": "A7E09716-B058-4F9F-8691-275D828BD624",
           "NormType": 3,
@@ -101,6 +114,9 @@
         }
       },
       "5": {
+        "name": "Chrome Credentials Accessed",
+        "description": "PowerShell accessed Chrome’s Login Data file over a network share, suggesting an attempt to steal saved passwords from the victim's browser.",
+        "severity": "Medium",
         "Log": {
           "logId": "B6C679D3-31E7-4C5C-9AB7-3CF4FB466A89",
           "NormType": 5145,
@@ -128,6 +144,9 @@
         }
       },
       "6": {
+        "name": "Lateral Movement via PowerShell",
+        "description": "PowerShell ran a remote command targeting another host using Invoke-Command, potentially moving laterally across the network using stolen credentials.",
+        "severity": "Medium",
         "Log": {
           "logId": "ABC794C8-F416-40E3-A2AC-8CF62D6DEDB6",
           "NormType": 4690,
@@ -155,6 +174,9 @@
         }
       },
       "7": {
+        "name": "Data Exfiltration in Progress",
+        "description": "PowerShell issued a command (Invoke-Exfil) indicating that it was attempting to exfiltrate collected data to an external server.",
+        "severity": "Critical",
         "Log": {
           "logId": "AABBA736-325C-4752-8405-3BC6E2F0DDBC",
           "NormType": 5156,
@@ -182,6 +204,9 @@
         }
       },
       "8": {
+        "name": "Draft.zip Deleted via Secure Delete",
+        "description": "A secure deletion tool (sdelete64.exe) was run by PowerShell to wipe Draft.zip, likely as part of an effort to clean up and evade detection.",
+        "severity": "High",
         "Log": {
           "logId": "A17F102C-AEFA-46DE-ABB9-BC7EE434518E",
           "NormType": 4689,
