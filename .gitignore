@@ -10,3 +10,5 @@ build-errors.log
 
 # pg ssl
 pgssl
+
+*venv

@@ -22,7 +22,7 @@ def predict():
 
     for feature in features_required:
         # Use the provided value as a string; if missing, use empty string.
-        value = str(data.get(feature, ""))
+        value = str(data.get(feature, "Unknown"))
         encoder = encoders.get(feature)
         if encoder is None:
             return jsonify({'error': f'No encoder found for feature: {feature}'}), 400
@@ -39,4 +39,6 @@ def predict():
     return jsonify({'prediction': prediction.tolist()})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=9080)
+
