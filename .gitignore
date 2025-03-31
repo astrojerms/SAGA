@@ -1,5 +1,7 @@
 *.zip
 
+.DS_Store
+
 bin/
 tmp/
 build-errors.log
@@ -8,3 +10,5 @@ build-errors.log
 
 # pg ssl
 pgssl
+
+*venv
