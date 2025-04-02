@@ -12,7 +12,7 @@ import (
 
 type Log struct {
 	LogID       string `json:"logId"`
-	NormType    int    `json:"NormType"`
+	NormType    string `json:"NormType"`
 	EventType   int    `json:"EventType"`
 	EventTime   string `json:"EventTime"`
 	EventId     int    `json:"EventId"`
@@ -49,11 +49,11 @@ type Entry struct {
 }
 
 type Event struct {
-	ID          int              `json:"id"`
-	Name        string           `json:"name"`
-	Description string           `json:"description"`
-	Severity    string           `json:"severity"`
-	Entries     map[string]Entry `json:"entries"`
+	ID          int     `json:"id"`
+	Name        string  `json:"name"`
+	Description string  `json:"description"`
+	Severity    string  `json:"severity"`
+	Entries     []Entry `json:"entries"`
 }
 
 type EventResponse struct {
@@ -105,14 +105,10 @@ func getEntry(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	eventID, _ := strconv.Atoi(parts[2])
-	entryID := parts[4]
+	entryID, _ := strconv.Atoi(parts[4])
 	for _, e := range events {
 		if e.ID == eventID {
-			entry, ok := e.Entries[entryID]
-			if !ok {
-				http.Error(w, "Entry not found", http.StatusNotFound)
-				return
-			}
+			entry := e.Entries[entryID]
 			respondJSON(w, entry)
 			return
 		}
