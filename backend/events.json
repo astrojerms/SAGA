@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "APT29-Deploy-Stealth-Toolkit",
-    "description": "APT29 is known for using the Pupy C2 server to deploy Meterpreter as part of deploying a stealth toolkit.",
+    "name": "APT29-Seaduke-Metasploit-Collection",
+    "description": "A toolkit linked to APT29 combining Seaduke malware with Metasploit for stealthy post-exploitation and command-and-control operations.",
     "severity": "critical",
     "entries": [
       {
